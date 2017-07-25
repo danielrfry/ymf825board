@@ -22,7 +22,7 @@ See "Initialization Procedure" for details of controlling the clock.
 ### ALRST
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#1|W/R|ALRST|"0"|"0"|"0"|"0"|"0"|"0"|"0"|80H|
 
 #### Description
@@ -50,7 +50,7 @@ bit:
 ### AP0, AP1, AP2, AP3
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#2|W/R|"0"|"0"|"0"|"0"|AP3|AP2|AP1|AP0|0FH|
 
 #### Description
@@ -71,7 +71,7 @@ blocks is as follows:
 ### GAIN
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#3|W/R|"0"|"0"|"0"|"0"|"0"|"0"|GAIN1|GAIN0|01H|
 
 
@@ -99,7 +99,7 @@ With 8ohm loaded, the gains become lower by about 0.2 dB (typ.).
 ### HW_ID
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#4|R|"0"|"0"|"0"|"0"|"0"|"0"|"0"|"1"|01H|
 
 #### Description
@@ -111,7 +111,7 @@ The value can be read even if the ALRST bit is set to "1".
 ### CONTENTS_DATA_REG
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#7|W|DT7|DT6|DT5|DT4|DT3|DT2|DT1|DT0|-|
 
 #### Description
@@ -120,7 +120,7 @@ The register is used to write contents data.
 ### Sequencer Setting
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#8|W/R|AllKeyOff|AllMute|AllEGRst|R_FIFOR|REP_SQ|R_SEQ| R_FIFO|START|00H|
 
 ### AllKeyOff
@@ -167,7 +167,7 @@ After setting the register bit to "1", wait for more than 6us and then return it
 ### SEQ_Vol
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#9|W/R|SEQ_Vol4|SEQ_Vol3|SEQ_Vol2|SEQ_Vol1|SEQ_Vol0|DIR_SV|"0"|SIZE8|00H|
 |#10|W/R|SIZE7|SIZE6|SIZE5|SIZE4|SIZE3|SIZE2|SIZE1|SIZE0|00H|
 
@@ -239,7 +239,7 @@ The SIZE is the register used to set the size of sequence data in bytes.
 ### CRGD_VNO
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#11|W/R|"0"|"0"|"0"|"0"|CRGD_VNO3|CRGD_VNO2|CRGD_VNO1|CRGD_VNO0|00H|
 
 #### Description
@@ -385,7 +385,7 @@ When this register bit is set to "0", the MUTE_ITIME (I_ADR#27) setting becomes 
 ### MASTER_VOL
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#25|W/R|MASTER_VOL5|MASTER_VOL4|MASTER_VOL3|MASTER_VOL2|MASTER_VOL1|MASTER_VOL0|"0"|"0"|00H|
 
 #### Description
@@ -463,7 +463,7 @@ The interpolation function is available.
 ### MUTE_ITIME
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#27|W/R|"0"|DADJT|MUTE_ITIME1|MUTE_ITIME0|CHVOL_ITIME1|CHVOL_ITIME0|MVOL_ITIME1|MVOL_ITIME0|00H|
 
 #### Description
@@ -497,7 +497,7 @@ The MVOL_ITIME is used to specify the master volume level variation time.
 ### LFO_RST
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|
 |#28|W/R|"0"|"0"|"0"|"0"|"0"|"0"|"0"|LFO_RST|00H|
 
 #### Description
@@ -510,7 +510,7 @@ Write "0" into the register bit after writing "1" to the bit.
 ### W_CEQ0/1/2
 
 | I_ADR | W/R | D7-D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|
 |#32|W|W_CEQ0|-|
 |#33|W|W_CEQ1|-|
 |#34|W|W_CEQ2|-|
