@@ -37,7 +37,7 @@ The following interface registers including the control registers are not reset 
 bit:
 + I_ADR#0: CLKE
 + I_ADR#1: ALRST (this register bit)
-+ I_ADR#2: AP0â€“3
++ I_ADR#2: AP0-3
 + I_ADR#29: DRV_SEL
 + I_ADR#80: COMM
 
@@ -219,9 +219,9 @@ The SEQ_Vol is the volume setting register of the sequencer volume.
 
 #### Description
 
-The DIR_SV register bit controls whether to apply the interpolation to the SEQ_Vol and the ChVol0–15.  
-When the register bit is set to "1", the interpolation is not applied to the SEQ_Vol and the ChVol0–15 regardless of the settings of the DIR_CV0–15 and the CHVOL_ITIME.  
-When it is set to "0" (reset value), the interpolation is dependent on the DIR_CV0–15 and CHVOL_ITIME settings.
+The DIR_SV register bit controls whether to apply the interpolation to the SEQ_Vol and the ChVol0-15.  
+When the register bit is set to "1", the interpolation is not applied to the SEQ_Vol and the ChVol0-15 regardless of the settings of the DIR_CV0?15 and the CHVOL_ITIME.  
+When it is set to "0" (reset value), the interpolation is dependent on the DIR_CV0?15 and CHVOL_ITIME settings.
 
 #### Reset Conditions
 1. When the power supplies are turned on (power-on reset).
@@ -478,8 +478,8 @@ When the DIR_MT is "1", no interpolation is selected regardless of this register
 ### CHVOL_ITIME
 
 #### Description
-The CHVOL_ITIME is used to specify the volume level variation time of the SEQ_Vol and the ChVol0–15.  
-This variation time becomes valid only for voices with the DIR_SV set to "0"and the DIR_CV0–15 set to "1".
+The CHVOL_ITIME is used to specify the volume level variation time of the SEQ_Vol and the ChVol0-15.  
+This variation time becomes valid only for voices with the DIR_SV set to "0"and the DIR_CV0-15 set to "1".
 + "00b": No interpolation (reset value)
 + "01b": Setting prohibited
 + "10b": Enables the interpolation. (approx. 0.2dB steps, 256/fs (0dB <-> Mute: approx. 5.3ms))
