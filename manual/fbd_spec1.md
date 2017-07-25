@@ -39,17 +39,17 @@ In addition, please understand that we will not guarantee any results by using S
 
 ### System Setting
 
-+ I_ADR#0–2, 4, 29 can be accessed even when the ALRST is "1".
++ I_ADR#0�?2, 4, 29 can be accessed even when the ALRST is "1".
 As might be expected, other registers can be accessed only when the ALRST is "0".
 
 
 | I_ADR | Name | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |#0| Clock Enable |W/R|"0"|"0"|"0"|"0"|"0"|"0"|"0"|CLKE|00H |
 |#1|Reset|W/R|ALRST|"0"|"0"|"0"|"0"|"0"|"0"|"0"|80H|
 |#2|Analog Block Power-down control|W/R|"0"|"0"|"0"|"0"|AP3|AP2|AP1|AP0| 0FH|
 |#3|Speaker Amplifier Gain Setting|W/R|"0"|"0"|"0"|"0"|"0"|"0"|GAIN1|GAIN0|01H|
-|#4|Hardware ID|R|"0"|"0"|"0"|"0"|"0"|"0"|"0"|“1”|01H|
+|#4|Hardware ID|R|"0"|"0"|"0"|"0"|"0"|"0"|"0"|"1"|01H|
 |#5|Interrupt|W/R R|"0"|"0"|"0"|EMP_DW|"0"|FIFO|"0"|SQ_STP|00H|
 |#6||W/R|"0"|EIRQ|"0"|EEMP_DW|"0"|EFIFO|"0"|ESQ_STP|00H|
 |#7|Contents Data Write Port|W|DT7|DT6|DT5|DT4|DT3|DT2|DT1|DT0|00H|
@@ -59,7 +59,7 @@ As might be expected, other registers can be accessed only when the ALRST is "0"
 |#11|Synthesizer Setting|W/R|"0"|"0"|"0"|"0"|CRGD_VNO3|CRGD_VNO2|CRGD_VNO1|CRGD_VNO0|00H|
 |#12||W|"0"|VoVol4|VoVol3|VoVol2|VoVol1|VoVol0|"0"|"0"|60H|
 |#13||W|"0"|"0"|FNUM9|FNUM8|FNUM7|BLOCK2|BLOCK1|BLOCK0|00H|
-|#14||W|"0”|FNUM6|FNUM5|FNUM4|FNUM3|FNUM2|FNUM1|FNUM0|00H|
+|#14||W|"0"|FNUM6|FNUM5|FNUM4|FNUM3|FNUM2|FNUM1|FNUM0|00H|
 |#15||W|"0"|KeyOn|Mute|EG_RST|ToneNum3|ToneNum2|ToneNum1|ToneNum0|00H|
 |#16||W|"0"|ChVol4|ChVol3|ChVol2|ChVol1|ChVol0|"0"|DIR_CV|60H|
 |#17||W|"0"|"0"|"0"|"0"|"0"|XVB2|XVB1|XVB0|00H|
@@ -76,7 +76,7 @@ As might be expected, other registers can be accessed only when the ALRST is "0"
 |#28|LFO Reset|W/R|"0"|"0"|"0"|"0"|"0"|"0"|"0"|LFO_RST|00H|
 |#29|Power Rail Selection|W/R|"0"|"0"|"0"|"0"|"0"|"0"|"0"|DRV_SEL|00H|
 |#30|Reserved|||||||||||
-|#31|Reserved||||||||||||
+|#31|Reserved|||||||||||
 
 Note
 + Before you write I_ADR#12-19 of Synthesizer Setting, you first have to write channel number to CRGD_VNO[3:0] (I_ADR#11).
@@ -138,7 +138,7 @@ Note
 ### Software Communication Check
 
 | I_ADR | Name | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 | Reset Value |
-|-|-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|-|-|
 |#80|Software test communication|W/R|COMM7|COMM6|COMM5|COMM4|COMM3|COMM2|COMM1|COMM0|00H|
 
 
