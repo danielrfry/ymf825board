@@ -19,7 +19,7 @@ In addition, please understand that we will not guarantee any results by using S
 
 ## Terminals of the board
 
-	SS:		chip select(CPU interface)
+	SS:	chip select(CPU interface)
 	MOSI:	serial data input(CPU interface)
 	MISO:	serial data output(CPU interface)
 	SCK:	serial clock(CPU interface)
