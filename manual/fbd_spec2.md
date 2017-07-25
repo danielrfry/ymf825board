@@ -254,7 +254,7 @@ The CRGD_VNO is used to specify a voice number.
 ## Control Register Write Registers
 
 | I_ADR | W/R | D7 | D6 | D5 | D4 | D3 | D2 | D1 | D0 |
-|-|-|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|-|-|-|
 |#12|W|"0"|VoVol4|VoVol3|VoVol2|VoVol1|VoVol0|"0"|"0"|
 |#13|W|"0"|"0"|FNUM9|FNUM8|FNUM7|BLOCK2|BLOCK1|BLOCK0|
 |#14|W|"0"|FNUM6|FNUM5|FNUM4|FNUM3|FNUM2|FNUM1|FNUM0|
