@@ -552,7 +552,7 @@ coefficients are overwritten when all the next 15 coefficients are written.
 The coefficient data format is as follows:  
 Sign bit: 1 bit (CEQ##[23]), integer part: 3 bits (CEQ##[22:20]) and fraction part: 20 bits
 (CEQ##[19:0])
-in 2’s complement.  
+in 2'complement.  
 The figure bellows shows the relationship between the coefficients and the circuit configuration.
 
 ![EQ](eq.png)
