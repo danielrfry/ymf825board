@@ -1,0 +1,127 @@
+/* Sticky footer styles
+-------------------------------------------------- */
+
+html,
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -60px;
+  padding: 0 0 60px;
+}
+
+#footer {
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+#wrap > .container {
+  padding: 80px 10px 0px;
+}
+.container .credit {
+  margin: 20px 0;
+}
+
+#footer > .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+
+/* main
+-------------------------------------------------- */
+body { font-family:Arial; padding-top: 0px; }
+.navbar-inverse {
+  background-color: #222222;
+  border-color: #080808;
+}
+.panel-title {
+  font-weight: bold;
+  color: #5e5e5e;
+}
+.welcomemessage{ 
+  margin: 10px 0px 30px 0px;
+  padding: 5px 20px;
+  background-color:#fafafa;
+  border-radius: 6px;
+  border: solid 1px #dddddd;
+}
+.requirementstitle { 
+  font-weight: bold;
+  background-color: #eeeeee;
+  margin: 5px;
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+.requirementsdescription { 
+  margin: 5px;
+  padding: 2px 12px;
+}
+.setupdescription { 
+  margin: 2px;
+  padding: 2px 5px;
+}
+.requirementsimg { 
+  border: solid 1px #eeeeee;
+  border-radius: 2px;
+  margin: 4px;
+}
+.setupimg { 
+  border: solid 1px #eeeeee;
+  border-radius: 2px;
+  margin: 4px;
+}
+.nodotlist {
+  list-style-type: none;
+  margin: 0px 0px 0px 0px;
+  padding: 15px;
+}
+.list0 {
+  margin: 0px 0px 5px 0px;
+}
+
+.floatright {
+  float: right;
+}
+.floatleft {
+  float: left;
+}
+.clearboth {
+  clear: both;
+}
+.libold {
+  font-weight: bold;
+}
+.dummylink {
+  text-decoration: underline;
+  color: #0000ff;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #dedede;
+}
+.reqicon { 
+  margin: 2px;
+}
+.launchapp { 
+  margin: 0px 8px
+}
+.browserflags {
+  margin-left: 2em;
+}
+.downloadbutton {
+  margin: 0px 1em;
+} 
+
+.max800 {
+  max-width: 800px;
+}
+
+

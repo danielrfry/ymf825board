@@ -1,0 +1,174 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>YMF825ボード紹介</title>
+    <style type="text/css">
+    
+    #sysreqpic {
+      width: 100%;
+      height: 100px;
+      background-image: url("images/requirements.jpg");
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: -130px -420px; //-260px -370px;
+      background-size: 1200px auto;
+    }
+    
+    #setuppic {
+      width: 100%;
+      height: 100px;
+      background-image: url("images/setuppic.jpg");
+      background-repeat: repeat;
+      background-attachment: scroll;
+      background-position: 100px 20px;
+      background-size: 1100px auto;
+    }
+    </style>
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="lightbox/css/lightbox.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id="wrap" style="margin-top:0px;">
+      <div class="navbar navbar-default navbar-fixed-top" id="navbar.bs">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span>Top</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#Introduce"><span class="glyphicon glyphicon-info-sign"></span> YMF825ボードの紹介</a></li>
+              <li><a href="#Information"><span class="glyphicon glyphicon-share"></span> ボード関連情報</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://inquiry.yamaha.com/contact/?act=27&lcl=ja_JP" target="_blank"><span class="glyphicon glyphicon-envelope"></span> お問い合わせ</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="welcomemessage" >
+          <h2>YMF825ボード GitHubPage へようこそ!</h2>
+          <p>
+             このWebサイトでは、ヤマハ製FM音源チップ「YMF825」を搭載したボードを動作させるための情報、サンプルソースを公開しています。<BR>
+            公開しているソースコードを自由に改造して、このボードを使ったガジェット工作に挑戦してみて下さい。<BR>
+            <div class="floatright"><a class="btn btn btn-success" href="https://github.com/yamaha-webmusic/ymf825board" target="_blank"><img src="images/whiteoctocat.png" width="25px"> ymf825board</a></div>
+            <div class="clearboth"></div>
+          </p>
+        </div>
+
+        <a name="Introduce"></a>
+        <div class="row">
+          <div class="col-xs-9 col-md-9">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-info-sign"></span> YMF825ボードの紹介</h3>
+              </div>
+
+              <div id="sysreqpic" class="container"></div>
+
+              <div class="panel-body">
+                <div class="requirementstitle">YMF825ボードとは</div>
+                <ul class="nodotlist">
+                  <li class="list0">YMF825ボードに搭載されている<a href="http://device.yamaha.com/ja/lsi/products/sound_generator/" target="_blank">YMF825(SD-1)</a>は、ヤマハから主に法人向けに販売しているFM音源チップです。<br>このチップを小型ボードに搭載し、ピンヘッダやオーディオ端子等を取り付けて、個人メイカーが利用しやすい形に商品化していただきました。</li>
+                </ul>
+                
+                <div class="requirementstitle">ヤマハのボードへの想い</div>
+                <ul class="nodotlist">
+                  <li class="list0"> メイカームーブメント、パーソナルファブリケーションと呼ばれる個人でモノづくりを行う動きが活発化しています。<br> ヤマハは、こうした「個人のものづくり」の成長性と可能性に着目しており、当社のアイコンとして定評のあるFM音源をぜひ、このモノづくりに活用して欲しい、という想いを持っています。</br> FM音源というと楽器やシンセサイザーといった商品群が思い浮かびますが、それ以外にも音の出る思いもよらないガジェットが個人メイカーの皆さんから生まれることを期待しています！</li>
+                </ul>
+                
+                <div class="requirementstitle">FM音源の仕様</div>
+                <ul>
+                  <li class="list0"> 4オペレータのFM音源 </li>
+                  <li class="list0"> 最大16音同時に発音可能 </li>
+                  <li class="list0"> FMの基本波形29種類内蔵、アルゴリズム8種類 </li>
+                  <li class="list0"> SPIによるシリアルインタフェース </li>
+                  <li class="list0"> スピーカアンプを内蔵 </li>
+                  <li class="list0"> ３バンドのイコライザ内蔵 </li>
+                  <li class="list0"> 16bitモノラルD/Aコンバータ内蔵 </li>
+                  <li class="list0"> 5V単一電源及び、5V/3.3Vの二電源の二つの電源モード </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3 col-sm-3"><!-- comment --></div>
+        </div> <!-- /.row -->
+
+
+
+        <a name="Information"></a>
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-share"></span> ボード関連情報</h3>
+              </div>
+              <div id="setuppic" class="container"></div>
+
+                <div class="requirementstitle">ハードウェア、販売情報</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="http://uda.la/ht/" target="_blank"> ウダデンシ</a> ウダデンシさんによるYMF825ボードの紹介サイトです。</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://www.switch-science.com/catalog/3333/" target="_blank"> スイッチサイエンス</a> スイッチサイエンスさんのYMF825ボード販売ページです。</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="http://akizukidenshi.com/catalog/default.aspx" target="_blank"> 秋月電子通商</a> 秋月電子通商さんの販売ページです。</li>
+                </ul>
+
+                <div class="requirementstitle">マニュアル</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/manual/fbd_spec1.md" target="_blank"> IF仕様概要</a> YMF825のIF仕様の全般、及びSPIでのアクセス方法についてのマニュアルです。</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/manual/fbd_spec2.md" target="_blank"> IF仕様詳細</a> YMF825の個別のレジスタ仕様についてのマニュアルです。</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/manual/fbd_spec3.md" target="_blank"> 音色パラメータの説明</a> YMF825のFM音源のパラメータのマニュアルです。</li>
+                </ul>
+                
+                <div class="requirementstitle">インストラクション</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="http://fabble.cc/yamahafsm/ymf825boardarduino" target="_blank"> YMF825BoardをArduinoで鳴らしてみる</a> fabble上で、Arduinoを使って音を鳴らすまでの様子を説明しています。</li>
+                </ul>
+                
+                <div class="requirementstitle">サンプルソース</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/manual/fbd_spec1.md" target="_blank"> sample1</a> Arduinoで「ドレミファソ」を繰り返し鳴らすサンプルソースです。</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div> <!-- /.row -->
+
+
+    
+    
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">Copyright (c) 2017 Yamaha Corporation. All rights reserved.</p>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="./assets/js/jquery.js"></script>
+    <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lightbox/js/lightbox-2.6.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+
+
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    
+    ga('create', 'UA-45092290-1', 'yamaha-webmusic.github.io');
+    ga('send', 'pageview');
+    </script>
+
+  </body>
+</html>
