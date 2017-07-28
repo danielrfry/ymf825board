@@ -271,11 +271,11 @@ Set DRV_SEL to "1" when this device is used in dual power supply configuration.
 
 	The reset state of the internal circuits is removed.
 
-1. Set the SFTRST to "8’hA3". 
+1. Set the SFTRST to "A3H". 
 
 	The synthesizer block is initialized.
 
-1. Set the SFTRST to "8’h00".
+1. Set the SFTRST to "00H".
 
 1. Wait for 30ms after the step 3.
 
