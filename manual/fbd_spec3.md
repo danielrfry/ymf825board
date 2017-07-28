@@ -1,5 +1,9 @@
 ## Tone Parameter
 
+#### Notes
++ [vn] means "Voice Number". Ymf825 has a maximum of 16 voices.
++ [op] means "FM Operator". Ymf825 has 4 operators per voice.
+
 ### BO
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|

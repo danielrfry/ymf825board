@@ -287,6 +287,36 @@ They are set for each voice.
 + FNUM : 000H
 + BLOCK: 00H
 
+#### Pitch Table
+
+|Note|Frequency|BLOCK|FNUM|
+|-|-|-|-|
+|C2		|130.8	|3	|357|
+|C#2	|138.6	|3	|378|
+|D2		|146.8	|3	|401|
+|D#2	|155.6	|3	|425|
+|E2		|164.8	|3	|450|
+|F2		|174.6	|3	|477|
+|F#2	|185	|3	|505|
+|G2		|196	|3	|535|
+|G#2	|207.7	|3	|567|
+|A2		|220	|3	|601|
+|A#2	|233.1	|3	|637|
+|B2		|246.9	|3	|674|
+|C3		|261.6	|4	|357|
+|C#3	|277.2	|4	|378|
+|D3		|293.7	|4	|401|
+|D#3	|311.1	|4	|425|
+|E3		|329.6	|4	|450|
+|F3		|349.2	|4	|477|
+|F#3	|370	|4	|505|
+|G3		|392	|4	|535|
+|G#3	|415.3	|4	|567|
+|A3		|440	|4	|601|
+|A#3	|466.2	|4	|637|
+|B3		|493.9	|4	|674|
+|C4		|523.3	|5	|357|
+
 ### ToneNum
 
 #### Description
@@ -362,8 +392,8 @@ When the calculation (add) result exceeds "3", "3"is used for the processing.
 ### INT, FRAC
 
 #### Description
-These registers specify a multiplier to the generated audio frequency.  
-The INT is an integer part and FRAC# is a fraction part.  
+These registers specify a multiplier to the generated audio frequency. This number and frequency are proportional.  
+The INT is an integer part and FRAC is a fraction part.  
 These registers are provided for each voice.  
 
 #### Reset Value
