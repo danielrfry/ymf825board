@@ -241,7 +241,7 @@ For details of the voice parameters, see "L6.2 Tone Parameter Memory Map".
 
 	The power supply should be powered with RST_N pin held "L" when the power-on reset requirements cannot be satisfied.
 
-1. Wait for 100μs after supply voltages rise
+1. Wait for 100us after supply voltages rise
 
 	up to the specified level.
 	This period of time is the time required for the regulator stabilization.
@@ -285,7 +285,7 @@ Set DRV_SEL to "1" when this device is used in dual power supply configuration.
 
 	The power-down state of Audio Out is removed.
 
-1. Wait for 10μs.
+1. Wait for 10us.
 
 	This period of time is the time required for preventing pop noise. Use this time for setting the synthesizer etc.
 
