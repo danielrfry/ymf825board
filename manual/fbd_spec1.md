@@ -1,4 +1,4 @@
-# SD-1(YMF825) Board IF specification
+# YMF825(SD-1) IF specification
 
 ## Caution
 
@@ -15,31 +15,11 @@ In addition, please understand that we will not guarantee any results by using S
 + Integrated 3-band equalizer
 + Integrated 16-bit monaural DAC
 
-
-
-## Terminals of the board
-
-	SS:	chip select(CPU interface)
-	MOSI:	serial data input(CPU interface)
-	MISO:	serial data output(CPU interface)
-	SCK:	serial clock(CPU interface)
-	GND:	ground
-	5Vin:	power supply(5v)
-	RST_N:	reset
-	Audio:	Audio Out
-	3.3Vin:	power supply(3.3v)
-
-### SPI Specification
-+ MSB first
-+ Mode 0
-+ max 10MHz
-
-
 ## Interface Register
 
 ### System Setting
 
-+ I_ADR#0â€?2, 4, 29 can be accessed even when the ALRST is "1".
++ I_ADR#0-2, 4, 29 can be accessed even when the ALRST is "1".
 As might be expected, other registers can be accessed only when the ALRST is "0".
 
 
@@ -144,6 +124,11 @@ Note
 
 ## Read/Write Accesses to Interface Registers
 
+### SPI Specification
++ MSB first
++ Mode 0
++ max 10MHz
+
 ### Single Write
 
 2 bytes (16 bits) is needed for one write access: 1-byte write command and 1-byte write data.
@@ -179,61 +164,60 @@ The following shows the details of the SO pin:
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#0+30x[vn]|Entire Tone Setting|"0"|"0"|"0"|"0"|"0"|"0"|BO1|BO0|
-|#1+30x[vn]||LFO1|LFO0|"0"|"0"|"0"|ALG2|ALG1|ALG0|
-|#2+30x[vn]|Operator1 Setting|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
-|#3+30x[vn]||RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
-|#4+30x[vn]||AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
-|#5+30x[vn]||TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
-|#6+30x[vn]||"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
-|#7+30x[vn]||MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
-|#8+30x[vn]||WS5|WS3|WS2|WS1|WS0|FB2|FB1|FB0|
-|#9+30x[vn]|Operator2 Setting|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
-|#10+30x[vn]||RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
-|#11+30x[vn]||AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
-|#12+30x[vn]||TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
-|#13+30x[vn]||"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
-|#14+30x[vn]||MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
-|#15+30x[vn]||WS5|WS3|WS2|WS1|WS0|"0"|"0"|"0"|
-|#16+30x[vn]|Operator3 Setting|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
-|#17+30x[vn]||RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
-|#18+30x[vn]||AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
-|#19+30x[vn]||TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
-|#20+30x[vn]||"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
-|#21+30x[vn]||MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
-|#22+30x[vn]||WS5|WS3|WS2|WS1|WS0|FB2|FB1|FB0|
-|#23+30x[vn]|Operator4 Setting|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
-|#24+30x[vn]||RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
-|#25+30x[vn]||AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
-|#26+30x[vn]||TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
-|#27+30x[vn]||"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
-|#28+30x[vn]||MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
-|#29+30x[vn]||WS5|WS3|WS2|WS1|WS0|"0"|"0"|"0"|
+|#0+30x[tn]|Entire Tone Setting|"0"|"0"|"0"|"0"|"0"|"0"|BO1|BO0|
+|#1+30x[tn]||LFO1|LFO0|"0"|"0"|"0"|ALG2|ALG1|ALG0|
+|#2+30x[tn]|Operator1 Setting|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
+|#3+30x[tn]||RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
+|#4+30x[tn]||AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
+|#5+30x[tn]||TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
+|#6+30x[tn]||"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
+|#7+30x[tn]||MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
+|#8+30x[tn]||WS5|WS3|WS2|WS1|WS0|FB2|FB1|FB0|
+|#9+30x[tn]|Operator2 Setting|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
+|#10+30x[tn]||RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
+|#11+30x[tn]||AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
+|#12+30x[tn]||TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
+|#13+30x[tn]||"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
+|#14+30x[tn]||MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
+|#15+30x[tn]||WS5|WS3|WS2|WS1|WS0|"0"|"0"|"0"|
+|#16+30x[tn]|Operator3 Setting|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
+|#17+30x[tn]||RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
+|#18+30x[tn]||AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
+|#19+30x[tn]||TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
+|#20+30x[tn]||"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
+|#21+30x[tn]||MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
+|#22+30x[tn]||WS5|WS3|WS2|WS1|WS0|FB2|FB1|FB0|
+|#23+30x[tn]|Operator4 Setting|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
+|#24+30x[tn]||RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
+|#25+30x[tn]||AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
+|#26+30x[tn]||TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
+|#27+30x[tn]||"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
+|#28+30x[tn]||MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
+|#29+30x[tn]||WS5|WS3|WS2|WS1|WS0|"0"|"0"|"0"|
 
 Note
-+ T_ADR means Voice Setting format of Cotents Format(below).
-+ vn: Voice Number(0-15)
++ T_ADR means Tone Setting format of Cotents Format(below).
++ tn: Tone Number(0-15)
 
 
 ### Contents Format
 
-This section describes the contents format this device use.
-The format specifies the sequence of data that can be played back with this device consists of melody contents.
+The contents format specifies tone parameters and the sequence of data that can be played back with this device consists of melody contents.
 The contents are written into the register (I_ADR#7: CONTENTS_DATA_REG) via the CPU interface.
 
 #### Data format
 
 + Header: 1byte(80H + Maximum Tone Number)
-+ Voice Setting 30 to 480bytes(it depends on the number of the configured voices)
++ Tone Setting 30 to 480bytes(it depends on the number of the configured tones)
 + Sequence Data(any size)
 + End(80H,03H,81H,80H)
 
-#### Voice Setting
+#### Tone Setting
 
-The voice parameters are set by the number of voices set to the Header.
-The parameter consists of 30 bytes of data for one voice.
+The tone parameters are set by the number of tones set to the Header.
+The parameter consists of 30 bytes of data for one tone.
 The data are transferred and assigned to the Tone parameter memory from Tone 0 in the order they are written; therefore, parameters of an intermediate Tone number cannot be written first.
-For details of the voice parameters, see "L6.2 Tone Parameter Memory Map".
+For details of the tone parameters, see "Tone Parameter"(fbd_spec3.md).
 
 ## Initialization Procedure
 
