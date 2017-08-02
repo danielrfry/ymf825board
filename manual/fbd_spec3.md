@@ -1,14 +1,14 @@
 ## Tone Parameter
 
 #### Notes
-+ [vn] means "Voice Number". Ymf825 has a maximum of 16 voices.
++ [tn] means "Tone Number". Ymf825 has a maximum of 16 tones.
 + [op] means "FM Operator". Ymf825 has 4 operators per voice.
 
 ### BO
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#0+30x[vn]|BO|"0"|"0"|"0"|"0"|"0"|"0"|BO1|BO0|
+|#0+30x[tn]|BO|"0"|"0"|"0"|"0"|"0"|"0"|BO1|BO0|
 
 #### Description
 BO means Basic Octave. BO controls an octave setting.
@@ -22,7 +22,7 @@ BO means Basic Octave. BO controls an octave setting.
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#1+30x[vn]|LFO,ALG|LFO1|LFO0|"0"|"0"|"0"|ALG2|ALG1|ALG0|
+|#1+30x[tn]|LFO,ALG|LFO1|LFO0|"0"|"0"|"0"|ALG2|ALG1|ALG0|
 
 #### Description
 
@@ -42,7 +42,7 @@ ALG means FM Algorithm. 8 algorithms can be selected.
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#2+30x[vn]+7x[op]|SR, XOF, KSR|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
+|#2+30x[tn]+7x[op]|SR, XOF, KSR|SR3|SR2|SR1|SR0|XOF|"0"|"0"|KSR|
 
 #### Description
 
@@ -57,7 +57,7 @@ KSR means key scale sensitivity for AEG rate. if KSR bit is on, high F-num EG ra
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#3+30x[vn]+7x[op]|RR,DR|RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
+|#3+30x[tn]+7x[op]|RR,DR|RR3|RR2|RR1|RR0|DR3|DR2|DR1|DR0|
 
 #### Description
 
@@ -68,7 +68,7 @@ DR controls decay rate of each operator.
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#4+30x[vn]+7x[op]|AR,SL|AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
+|#4+30x[tn]+7x[op]|AR,SL|AR3|AR2|AR1|AR0|SL3|SL2|SL1|SL0|
 
 #### Description
 
@@ -79,7 +79,7 @@ SL controls sustain level of each operator. Sustain Level is the level just afte
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#5+30x[vn]+7x[op]|TL,KSL|TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
+|#5+30x[tn]+7x[op]|TL,KSL|TL5|TL4|TL3|TL2|TL1|TL0|KSL1|KSL0|
 
 #### Description
 TL means total level.TL controls operator level.  
@@ -95,7 +95,7 @@ KSL means key scaling level sensitivity.In natural instruments, the volume atten
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#6+30x[vn]+7x[op]|DAM,EAM,DVB,EVB|"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
+|#6+30x[tn]+7x[op]|DAM,EAM,DVB,EVB|"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|
 
 #### Description
 
@@ -118,7 +118,7 @@ DVB means vibrato depth.
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#7+30x[vn]+7x[op]|MULTI, DT|MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
+|#7+30x[tn]+7x[op]|MULTI, DT|MULTI3|MULTI2|MULTI1|MULTI0|"0"|DT2|DT1|DT0|
 
 #### Description
 MULTI controls magnification of frequency.  
@@ -134,7 +134,7 @@ DT means detune.
 
 |T_ADR|Name|D7|D6|D5|D4|D3|D2|D1|D0|
 |-|-|-|-|-|-|-|-|-|-|
-|#8+30x[vn]+7x[op]|WS,FB|WS5|WS3|WS2|WS1|WS0|FB2|FB1|FB0|
+|#8+30x[tn]+7x[op]|WS,FB|WS5|WS3|WS2|WS1|WS0|FB2|FB1|FB0|
 
 #### Description
 WS means wave shape each operator generates.
