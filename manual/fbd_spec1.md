@@ -2,7 +2,7 @@
 
 ## Caution
 
-Although this manual is created based on the SD-1 specifications, only the information necessary for this board is described. Therefore, please understand beforehand that it is not a complete specification of SD-1.
+Although this manual is created based on the SD-1 specifications, only the information necessary for YMF825Board is described. Therefore, please understand beforehand that it is not a complete specification of SD-1.
 In addition, please understand that we will not guarantee any results by using SD-1 based on the contents posted in this manual.
 
 
