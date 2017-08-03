@@ -262,7 +262,7 @@ The CRGD_VNO is used to specify a tone number.
 |#16|W|"0"|ChVol4|ChVol3|ChVol2|ChVol1|ChVol0|"0"|DIR_CV|
 |#17|W|"0"|"0"|"0"|"0"|"0"|XVB2|XVB1|XVB0|
 |#18|W|"0"|"0"|"0"|INT1|INT0|FRAC8|FRAC7|FRAC6|
-|#19|W|"0"|FRAC6|FRAC5|FRAC4|FRAC3|FRAC2|FRAC1|FRAC0|
+|#19|W|"0"|FRAC5|FRAC4|FRAC3|FRAC2|FRAC1|FRAC0|"0"|
 |#20|W|"0"|"0"|"0"|"0"|"0"|"0"|"0"|DIR_MT|
 
 ### VoVol
