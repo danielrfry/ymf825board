@@ -134,7 +134,7 @@ The detune frequency is affected by MULTI setting. If MULTI is doubled, it will 
 The table below shows the frequency difference between BLOCK+BO, FNUM, DT setting and DT=0.
 
 |BLOCK+BO|FNUM|DT=x01b|DT=x10b|DT=x11b|
-|-|-|-|-|-|-|
+|-|-|-|-|-|
 |0|000H-|0[Hz]|0.05[Hz]|0.09[Hz]|
 |0|1C0H-|0|0.05|0.09|
 |0|200H-|0|0.05|0.09|
