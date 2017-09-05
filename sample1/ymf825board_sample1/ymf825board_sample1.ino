@@ -62,7 +62,7 @@ void init_825(void) {
    delay(1);
    if_s_write( 0x02, 0x00 );
    //add
-   if_s_write( 0x19, 0x20 );//MASTER VOL
+   if_s_write( 0x19, 0xF0 );//MASTER VOL
    if_s_write( 0x1B, 0x3F );//interpolation
    if_s_write( 0x14, 0x00 );//interpolation
    if_s_write( 0x03, 0x01 );//Analog Gain
