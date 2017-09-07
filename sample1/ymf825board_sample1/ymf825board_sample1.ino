@@ -1,5 +1,6 @@
 /*
-   RST_N- Pin9
+ Conditions only for Arduino UNO
+   RST_N- Pin9   
    SS   - Pin10
    MOSI - Pin11
    MISO - Pin12
@@ -9,11 +10,13 @@
 //0 :5V 1:3.3V
 #define OUTPUT_power 0
 
+// only for Arduino UNO
 void set_ss_pin(int val) {
     if(val ==HIGH) PORTB |= (4);
     else PORTB &= ~(4);
 }
 
+// only for Arduino UNO
 void set_rst_pin(int val) {
     if(val ==HIGH) PORTB |= (2);
     else PORTB &= ~(2);
