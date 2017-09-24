@@ -3,7 +3,7 @@
 ## About this Sample Module
 
 This sample program is a software module for using YMF825 as a MIDI tone generator. It's available for the following MIDI Command.
-* Key On / Key Off
++ Key On / Key Off
 + Program Change
 + Control Change #1
 + Control Change #7
