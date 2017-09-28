@@ -101,8 +101,8 @@ void Fmvoice_chgPit( Fmvoice* _this, unsigned short pb )
 
 	unsigned char reg[2];
 	unsigned char pit = pb/64;
-	reg[1] = (unsigned char)((tPitTbl[pit]<<2) & 0x00ff);
-	reg[0] = (unsigned char)(((tPitTbl[pit]<<3) & 0xff00)>>8);
+	reg[1] = (unsigned char)((tPitTbl[pit]<<1) & 0x007e);
+	reg[0] = (unsigned char)(((tPitTbl[pit]<<2) & 0x1f00)>>8);
 
 	writeSingle( 11, _this->_vnum );
 	writeSingle( REG_TOP_ADRS+REG_INT, reg[0] );
@@ -133,7 +133,7 @@ static void setBasicPit( Fmvoice* _this, unsigned char note )
 
 	signed short realNote = note;
 	while ( realNote > 128 ){ realNote -= 12;}
-	while ( realNote < 0 ){ realNote -= 12;}
+while ( realNote < 0 ){ realNote += 12;}
 
 	int tblIndex = (realNote % 12) * 20;
 
