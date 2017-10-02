@@ -5,10 +5,10 @@
 IF Specification of YMF825Board
 
 ### sample1
-Sample Program that generates "Do-Re-Mi-Fa-So" automatically on Arduino
+Sample Program that generates "Do-Re-Mi-Fa-So" automatically on Arduino Uno
 
 ### sample2
-Software Module that makes YMF825 a MIDI tone generator
+Software Module that makes YMF825 a MIDI tone generator written in C Language
 
 ## copyright & license
 **Copyright (c) 2017 Yamaha Corporation released under the MIT license.**  
@@ -24,7 +24,7 @@ YMF825Board のIF仕様
 Arduinoで「ドレミファソ」が自動で発音するサンプルプログラム
 
 ### sample2
-YMF825をMIDI音源化するためのソフトウェアモジュール
+YMF825をMIDI音源化するC言語のソフトウェアモジュール
 
 ## 著作権とライセンス
 **Copyright (c) 2017 Yamaha Corporation released under the MIT license.**  
