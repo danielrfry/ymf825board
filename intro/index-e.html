@@ -1,0 +1,175 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>YMF825Board紹介</title>
+    <style type="text/css">
+    
+    #sysreqpic {
+      width: 100%;
+      height: 100px;
+      background-image: url("images/825.png");
+      background-repeat: no-repeat;
+      background-attachment: scroll;
+      background-position: -100px -400px; //-260px -370px;
+      background-size: 1200px auto;
+    }
+    
+    #setuppic {
+      width: 100%;
+      height: 100px;
+      background-image: url("images/all.png");
+      background-repeat: repeat;
+      background-attachment: scroll;
+      background-position: -100px -400px; //100px 20px;
+      background-size: 1300px auto;//1100px
+    }
+    </style>
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="lightbox/css/lightbox.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div id="wrap" style="margin-top:0px;">
+      <div class="navbar navbar-default navbar-fixed-top" id="navbar.bs">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home"></span>Top</a>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="#Introduce"><span class="glyphicon glyphicon-info-sign"></span> Introduction of YMF825Board</a></li>
+              <li><a href="#Information"><span class="glyphicon glyphicon-share"></span> Information</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="welcomemessage" >
+          <h2>Welcome to YMF825Board GitHubPage!</h2>
+          <p>
+             In this Web site, we released information and sample source to operate the board with Yamaha FM tone generator chip "YMF825".<BR>
+            Please freely modify the released source code and challeng making gadgets using this board.<BR>
+            <div class="floatright"><a class="btn btn btn-success" href="https://github.com/yamaha-webmusic/ymf825board" target="_blank"><img src="images/whiteoctocat.png" width="25px"> ymf825board</a></div>
+            <div class="clearboth"></div>
+          </p>
+        </div>
+
+        <a name="Introduce"></a>
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-info-sign"></span> Introduction of YMF825Board</h3>
+              </div>
+
+              <div id="sysreqpic" class="container"></div>
+
+              <div class="panel-body">
+                <div class="requirementstitle">About YMF825Board</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a href="http://device.yamaha.com/en/lsi/products/sound_generator/" target="_blank">YMF825(SD-1)</a> installed in YMF825Board is an FM tone generator chip which Yamaha mainly sells for corporations.<br>We had this chip installed on a small board, attached pin headers and audio terminals etc, and commercialized it into a form that personal makers can use easily.</li>
+                </ul>
+                
+                <div class="requirementstitle">Yamaha's expectations for this board</div>
+                <ul class="nodotlist">
+                  <li class="list0"> Movement of manufacturing by individuals called "Maker Movement", "Personal Fablication" is expanding all over the world.<br> Yamaha has focused on the growth potential and possibilities of such "individual manufacturing", and we hope that an FM tone generator, which are well-established as our icons, will be utilized for the manufacturing.</br> In terms of FM tone generator, product groups such as electronic musical instruments and synthesizers come to mind, but we expect that individual makers will come up with unexpected gadgets with sounds besides that!</li>
+                </ul>
+                
+                <div class="requirementstitle">Specification of Tone Generator</div>
+                <ul>
+                  <li class="list0"> 16-voice polyphonic 4-operators FM synthesizer </li>
+                  <li class="list0"> 29 on-chip operator-waveforms and 8 algorithms offers a whole variety of sound </li>
+                  <li class="list0"> Synchronous serial data link for host controller interface </li>
+                  <li class="list0"> Integrated loudspeaker driver </li>
+                  <li class="list0"> Integrated 3-band equalizer </li>
+                  <li class="list0"> Integrated 16-bit monaural DAC </li>
+                  <li class="list0"> Flexible Power Supply Configurations </li>
+                </ul>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-3 col-sm-3"><!-- comment --></div>
+        </div> <!-- /.row -->
+
+
+
+        <a name="Information"></a>
+        <div class="row">
+          <div class="col-xs-12 col-md-12">
+            <div class="panel panel-default">
+
+              <div class="panel-heading">
+                <h3 class="panel-title"><span class="glyphicon glyphicon-share"></span> Information</h3>
+              </div>
+
+              <div id="setuppic" class="container"></div>
+
+              <div class="panel-body">
+                <div class="requirementstitle">Hardware/Sales Information</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="http://uda.la/fm/" target="_blank"> UdaDenshi</a> Introduction Page of YMF825Board revA by UdaDenshi</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://www.switch-science.com/catalog/3399/" target="_blank"> Switch Science</a> Sales page by Switch Science</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="http://akizukidenshi.com/catalog/g/gM-12414/" target="_blank"> Akizuki Denshi Tsusyo</a> Sales page by Akizuki Denshi Tsusyo</li>
+                </ul>
+
+                <div class="requirementstitle">Manuals</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/manual/fbd_spec1.md" target="_blank"> IF Specification Outline</a> Manual for YMF825 IF Specification outline and SPI communication</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/manual/fbd_spec2.md" target="_blank"> IF Specification Details</a> Manual for YMF825 individual registor specifications</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/manual/fbd_spec3.md" target="_blank"> The Explanation of Tone Parameter</a> Manual for FM tone parameter of YMF825</li>
+                </ul>
+                
+<!--                <div class="requirementstitle">Instruction</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="http://fabble.cc/yamahafsm/ymf825boardarduino" target="_blank"> YMF825BoardをArduinoで鳴らしてみる</a> fabble上で、Arduino UNOを使って音を鳴らすまでの様子を説明しています。</li>
+                </ul> -->
+                
+                <div class="requirementstitle">Sample Source</div>
+                <ul class="nodotlist">
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/sample1/" target="_blank"> sample1</a> Sample Program that generates "Do-Re-Mi-Fa-So" automatically on Arduino Uno</li>
+                  <li class="list0"><a class="btn btn-xs btn-default downloadbutton" href="https://github.com/yamaha-webmusic/ymf825board/blob/master/sample2/" target="_blank"> sample2</a> Software Module that makes YMF825 a MIDI tone generator written in C Language</li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div> <!-- /.row -->
+
+
+    
+    
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">Copyright (c) 2017 Yamaha Corporation. All rights reserved.</p>
+      </div>
+    </div>
+
+
+    <script type="text/javascript" src="./assets/js/jquery.js"></script>
+    <script type="text/javascript" src="./dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./lightbox/js/lightbox-2.6.min.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+
+
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+     ga('create', 'UA-45092290-3', 'auto');
+     ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>
