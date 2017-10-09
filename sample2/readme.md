@@ -2,34 +2,35 @@
 
 ## About this Sample Module
 
-This sample program is a software module for using YMF825 as a MIDI tone generator. It's available for the following MIDI Commands.
-+ Key On / Key Off
+This is a software module for using YMF825 as a MIDI tone generator. It supports the following MIDI Commands.
++ Note On / Note Off
 + Program Change
 + Control Change #1
 + Control Change #7
 + Control Change #64
 + Pitch Bend
 
-## How to use on Arduino
+## How to run on Arduino
 
-+ Create a folder for development and copy all files in /common and files in /arduino to the folder together.
++ Create a folder and copy all files in /common and files in /arduino to the folder.
 + Open the .ino file from Arduino IDE.
-+ After successfully loading, each file will appear on the tab area. If you do Verify and Upload as it is, Arduino will work.
-+ ymf825board_sample2.ino is a program that automatically plays 1 octave by the semitone in order.
++ Each file will appear on the tab area, after loading. Verify and Upload as is, Arduino will work.
++ ymf825board_sample2.ino is a sketch that automatically plays ascending semitones for an octave.
 
-## How to use on Raspberry Pi
+## How to run on Raspberry Pi
 
-+ Since the use of the bcm2835 library is a prerequisite, install the bcm2835 library.
++ Requires the bcm2835 library.
++ (If note installed)Install the bcm2835 library.
 + Please configure setting of makefile so that all files in /common and files in /raspi are compiled.
 
 
 ## Module Interface
 | Function Name | details | When it's called | include file |
 |---|---|---|---|
-|initSPI()|initialize SPI|in a application initialize section|fmsd1.h|
-|initSD1()|initialize YMF825(SD1)|in a application initialize section(after initSPI())|fmsd1.h|
+|initSPI()|initialize SPI|in an application initialization section|fmsd1.h|
+|initSD1()|initialize YMF825(SD1)|in an application initialization section(after initSPI())|fmsd1.h|
 |Fmdriver_init()|initialize the module|after initSD1()|fmif.h|
-|Fmdriver_sendMidi()|send MIDI messages to the module|when it has gotten a MIDI message|fmif.h|
+|Fmdriver_sendMidi()|send MIDI messages to the module|when it recieves a MIDI message|fmif.h|
 
 + In the case of Arduino, please wrap '#include fmif.h' in 'extern "C"{}'.
 
@@ -37,7 +38,7 @@ This sample program is a software module for using YMF825 as a MIDI tone generat
 ## このサンプルについて
 
 本サンプルプログラムは、YMF825をMIDI音源化するためのソフトウェアモジュールです。以下のMIDI Commandに対応しています。
-+ Key On / Key Off
++ Note On / Note Off
 + Program Change
 + Control Change #1
 + Control Change #7
