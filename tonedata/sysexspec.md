@@ -4,6 +4,7 @@
 - Up to 128 tone data can be transferred.
 - Secured an area to store the tone name for 16 characters.
 
+
 |Number|Hex|bit7|6|5|4|3|2|1|0|Range|Definition|Notes|
 |-|-|-|-|-|-|-|-|-|-|-|-|
 |0|"F0"|"1"|"1"|"1"|"1"|"0"|"0"|"0"|"0"||||
