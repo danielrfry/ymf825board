@@ -1,11 +1,11 @@
 # YMF825 MIDI System Exclusive Format
 
-+ This format is proposed by Yamaha in order to mutually utilize YMF825 tone data created by the customer.
++ This format is proposed by Yamaha in order to share YMF825 tone data created by the customer.
 + Up to 128 tone data can be transferred.
 + Secured an area to store the tone name for 16 characters.
 
 
-| Number | Hex | bit7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | Range | Definition | Notes |
+|No.|Hex|bit7|6|5|4|3|2|1|0|range|definition|notes|
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
 |0|"F0"|"1"|"1"|"1"|"1"|"0"|"0"|"0"|"0"||||
 |1|"43"|"0"|"1"|"0"|"0"|"0"|"0"|"1"|"1"||YAMAHA||
