@@ -12,6 +12,7 @@ static Note* getNote(Part* _this);
 unsigned char Part_cc1(Part* _this){ return _this->_cc1; }
 unsigned char Part_cc7(Part* _this){ return _this->_cc7; }
 unsigned short Part_pb(Part* _this){ return _this->_pbvalue; }
+unsigned char Part_toneNumber(Part* _this){ return _this->_toneNumber; }
 
 void Part_init( Part* _this )
 {
@@ -26,6 +27,7 @@ void Part_init( Part* _this )
 	_this->_cc7 = 100;
 	_this->_cc64 = 0;
 	_this->_pbvalue = 0x2000;
+	_this->_toneNumber = 0;
 
 	for ( i=0; i<MAX_NOTE_OBJECT; i++ ){
 		Note_init(&_this->_note[i]);
@@ -123,7 +125,6 @@ void Part_cc( Part* _this, unsigned char ccnum, unsigned char value )
 }
 void Part_pc( Part* _this, unsigned char num )
 {
-	unsigned char toneNum[1];
 	Note* nt = _this->_topNt;
 	Note* nextNt;
 
@@ -134,8 +135,7 @@ void Part_pc( Part* _this, unsigned char num )
 		nt = nextNt;
 	}
 
-	toneNum[0] = num;
-	Tone_chgPcn(toneNum,1);
+	_this->_toneNumber = num;
 }
 void Part_pbend( Part* _this, unsigned char lsb, unsigned char msb )
 {

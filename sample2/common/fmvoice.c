@@ -6,11 +6,6 @@
 #include	"fmsd1.h"
 #include	"fmpart.h"
 
-static const unsigned char REG_SIZE = 8;
-
-//	Prototype
-static void setBasicPit( Fmvoice* _this, unsigned char note );
-
 //	setter
 void Fmvoice_setVoiceNum( Fmvoice* _this, unsigned char vn ){ _this->_vnum = vn; }
 void Fmvoice_setNextVc( Fmvoice* _this, Fmvoice* vc ){ _this->_nextVc = vc; }
@@ -27,7 +22,6 @@ void Fmvoice_init( Fmvoice* _this )
 }
 void Fmvoice_keyon( Fmvoice* _this, void* nt, void* pt, void* tn, unsigned char note, unsigned char vel )
 {
-	ToneData* tnp = (ToneData*)tn;
 	Part* ptp = (Part*)pt;
 
 	_this->_parent = nt;
@@ -41,13 +35,10 @@ void Fmvoice_keyon( Fmvoice* _this, void* nt, void* pt, void* tn, unsigned char 
 	writeSingle( REG_TOP_ADRS+REG_CTRL, 0x30 );
 
 	//	FNUM,BLOCK
-	setBasicPit( _this, note );
+	Fmvoice_setBasicPit( _this, note );
 
 	//	Vol
-	unsigned char vol = tnp->voiceVolume;
-	if ( vol >= 32 ){ vol = 31; }
-	vol = (31 - vol) << 2;
-	writeSingle( REG_TOP_ADRS+REG_VOL, vol );
+	writeSingle( REG_TOP_ADRS+REG_VOL, vel&0xfc );
 
 	//	ChVol
 	writeSingle( REG_TOP_ADRS+REG_CH_VOL, 0x71 );
@@ -59,7 +50,7 @@ void Fmvoice_keyon( Fmvoice* _this, void* nt, void* pt, void* tn, unsigned char 
 	Fmvoice_chgPit(_this, Part_pb(ptp));
 
 	//	KeyOn, ToneNum
-	writeSingle( REG_TOP_ADRS+REG_CTRL, 0x40 );
+	writeSingle( REG_TOP_ADRS+REG_CTRL, 0x40 + Part_toneNumber(ptp) );
 }
 void Fmvoice_keyoff( Fmvoice* _this )
 {
@@ -115,7 +106,7 @@ void Fmvoice_chgVibDpt( Fmvoice* _this, unsigned char vibDpt )
 	writeSingle( 11, _this->_vnum );
 	writeSingle( REG_TOP_ADRS+REG_XVB, vibDpt );
 }
-static void setBasicPit( Fmvoice* _this, unsigned char note )
+void Fmvoice_setBasicPit( Fmvoice* _this, unsigned char note )
 {
 	static const unsigned short tFreq[240] = {
 	347,348,349,350,351,352,353,354,355,356,	357,358,359,360,361,362,363,365,366,367,
@@ -133,7 +124,7 @@ static void setBasicPit( Fmvoice* _this, unsigned char note )
 
 	signed short realNote = note;
 	while ( realNote > 128 ){ realNote -= 12;}
-while ( realNote < 0 ){ realNote += 12;}
+	while ( realNote < 0 ){ realNote += 12;}
 
 	int tblIndex = (realNote % 12) * 20;
 

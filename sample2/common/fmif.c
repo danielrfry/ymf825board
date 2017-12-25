@@ -9,6 +9,7 @@ static unsigned char	_midiDataByte1;
 static unsigned char	_midiDataByte2;
 
 //	Prototype
+static void receiveDataByte( unsigned char byteStream );
 static void	generateMidiCmd(void);
 
 void Fmdriver_init( void )
@@ -23,36 +24,50 @@ void Fmdriver_init( void )
 }
 void Fmdriver_sendMidi( unsigned char byteStream )
 {
-	if (byteStream & 0x80 ){
-		_midiStatus = byteStream;
-		_midiCmdCounter = 1;
-	}
-	else {
-		switch (_midiCmdCounter){
-			case 0: case 1:{
-				_midiDataByte1 = byteStream;
-				switch ( _midiStatus & 0xf0 ){
-					case 0xc0: case 0xd0:{
-						_midiCmdCounter = 0;
-						generateMidiCmd();
-						break;
-					}
-					case 0xf0: break;
-					default:{
-						_midiCmdCounter = 2;
-						break;
-					}
-				}
-				break;
-			}
-			case 2:{
-				_midiDataByte2 = byteStream;
-				_midiCmdCounter = 0;
-				generateMidiCmd();
-				break;
-			}
-			default: break;
+	if ( byteStream & 0x80 ){
+		if ( byteStream == 0xf7 ){
+			Tone_sendTone();
+			_midiStatus = 0;
+			_midiCmdCounter = 0;
 		}
+		else {
+			_midiStatus = byteStream;
+			_midiCmdCounter = 1;
+		}
+	}
+	else if ( _midiStatus == 0xf0 ){
+		Tone_setToneExc(byteStream,_midiCmdCounter);
+		_midiCmdCounter += 1;
+	}
+	else if ( _midiStatus != 0 ){
+		receiveDataByte(byteStream);
+	}
+}
+static void receiveDataByte( unsigned char byteStream )
+{
+	switch (_midiCmdCounter){
+		case 0: case 1:{
+			_midiDataByte1 = byteStream;
+			switch ( _midiStatus & 0xf0 ){
+				case 0xc0: case 0xd0:{
+					_midiCmdCounter = 0;
+					generateMidiCmd();
+					break;
+				}
+				default:{
+					_midiCmdCounter = 2;
+					break;
+				}
+			}
+			break;
+		}
+		case 2:{
+			_midiDataByte2 = byteStream;
+			_midiCmdCounter = 0;
+			generateMidiCmd();
+			break;
+		}
+		default: break;
 	}
 }
 static void generateMidiCmd( void )

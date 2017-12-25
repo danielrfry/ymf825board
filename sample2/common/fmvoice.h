@@ -18,6 +18,7 @@ extern void Fmvoice_keyoff( Fmvoice* _this );
 extern void Fmvoice_release( Fmvoice* _this );
 extern void Fmvoice_chgVibDpt( Fmvoice* _this, unsigned char vibDpt );
 extern void Fmvoice_chgPit( Fmvoice* _this, unsigned short pb );
+extern void Fmvoice_setBasicPit( Fmvoice* _this, unsigned char note );
 
 //	setter
 extern void Fmvoice_setVoiceNum( Fmvoice* _this, unsigned char vn );
