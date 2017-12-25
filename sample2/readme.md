@@ -9,6 +9,7 @@ This is a software module for using YMF825 as a MIDI tone generator. It supports
 + Control Change #7
 + Control Change #64
 + Pitch Bend
++ System Exclusive(YMF825 Tone Data)
 
 ## How to run on Arduino
 
@@ -44,6 +45,7 @@ This is a software module for using YMF825 as a MIDI tone generator. It supports
 + Control Change #7
 + Control Change #64
 + Pitch Bend
++ System Exclusive(YMF825音色データ)
 
 ## Arduinoでの使い方
 
