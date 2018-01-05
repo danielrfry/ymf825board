@@ -159,10 +159,10 @@ void Tone_sendTone( void )
 		}
 
 		riPtr[0] = (td->voiceCommon & 0x60)>>5;
-		riPtr[1] = ((td->voiceCommon & 0xc0)>>3) | (td->voiceCommon & 0x07);
+		riPtr[1] = ((td->voiceCommon & 0x18)<<3) | (td->voiceCommon & 0x07);
 
 		for ( j=0; j<MAX_FM_OPERATOR; j++ ){
-			riPtr[MAX_ELEMENT_PRM+OPERATOR_PRM_REG_SZ*j+0] = (td->opPrm[j][3] << 4) | (td->opPrm[j][0] & 0x08) | ((td->opPrm[j][0] & 0x01)<<2);
+			riPtr[MAX_ELEMENT_PRM+OPERATOR_PRM_REG_SZ*j+0] = (td->opPrm[j][3] << 4) | (td->opPrm[j][0] & 0x08) | ((td->opPrm[j][0] & 0x04)>>2);
 			riPtr[MAX_ELEMENT_PRM+OPERATOR_PRM_REG_SZ*j+1] = (td->opPrm[j][4] << 4) | td->opPrm[j][2];
 			riPtr[MAX_ELEMENT_PRM+OPERATOR_PRM_REG_SZ*j+2] = (td->opPrm[j][1] << 4) | td->opPrm[j][5];
 			riPtr[MAX_ELEMENT_PRM+OPERATOR_PRM_REG_SZ*j+3] = (td->opPrm[j][6] << 2) | (td->opPrm[j][0] & 0x03);
