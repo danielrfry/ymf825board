@@ -24,7 +24,7 @@
 |14|p7|"0"|"0"|TL5|TL4|TL3|TL2|TL1|TL0|0-63|Op.1 Total Level||
 |15|p8|"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|0-3,0/1,0-3,0/1|Op.1 Modulation||
 |16|p9|"0"|DT2|DT1|DT0|MT3|MT2|MT1|MT0|0-7,0-15|Op.1 Pitch|Detune/ Multi|
-|17|p10|"0"|"0"|"0"|FB4|FB3|FB2|FB1|FB0|0-15|Op.1 Wave Shape||
+|17|p10|"0"|"0"|"0"|WS4|WS3|WS2|WS1|WS0|0-15|Op.1 Wave Shape||
 |18|p11|"0"|"0"|"0"|"0"|XOF|KSR|KSL1|KSL0|0/1,0/1,0-3|Op.2 Key Control| Ignore Note Off/ Key Scale Sens./Key Scale Level|
 |19|p12|"0"|"0"|"0"|"0"|AR3|AR2|AR1|AR0|0-15|Op.2 Attack Rate||
 |20|p13|"0"|"0"|"0"|"0"|DR3|DR2|DR1|DR0|0-15|Op.2 Decay Rate||
@@ -34,7 +34,7 @@
 |24|p17|"0"|"0"|TL5|TL4|TL3|TL2|TL1|TL0|0-63|Op.2 Total Level||
 |25|p18|"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|0-3,0/1,0-3,0/1|Op.2 Modulation||
 |26|p19|"0"|DT2|DT1|DT0|MT3|MT2|MT1|MT0|0-7,0-15|Op.2 Pitch|Detune/ Multi|
-|27|p20|"0"|"0"|"0"|FB4|FB3|FB2|FB1|FB0|0-15|Op.2 Wave Shape||
+|27|p20|"0"|"0"|"0"|WS4|WS3|WS2|WS1|WS0|0-15|Op.2 Wave Shape||
 |28|p21|"0"|FB2|FB1|FB0|XOF|KSR|KSL1|KSL0|0-7, 0/1, 0/1, 0-3|Op.3 Key Control|Feedback/ Ignore Note Off/ Key Scale Sens./ Key Scale Level|
 |29|p22|"0"|"0"|"0"|"0"|AR3|AR2|AR1|AR0|0-15|Op.3 Attack Rate||
 |30|p23|"0"|"0"|"0"|"0"|DR3|DR2|DR1|DR0|0-15|Op.3 Decay Rate||
@@ -44,7 +44,7 @@
 |34|p27|"0"|"0"|TL5|TL4|TL3|TL2|TL1|TL0|0-63|Op.3 Total Level||
 |35|p28|"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|0-3,0/1,0-3,0/1|Op.3 Modulation||
 |36|p29|"0"|DT2|DT1|DT0|MT3|MT2|MT1|MT0|0-7,0-15|Op.3 Pitch|Detune/ Multi|
-|37|p30|"0"|"0"|"0"|FB4|FB3|FB2|FB1|FB0|0-15|Op.3 Wave Shape||
+|37|p30|"0"|"0"|"0"|WS4|WS3|WS2|WS1|WS0|0-15|Op.3 Wave Shape||
 |38|p31|"0"|"0"|"0"|"0"|XOF|KSR|KSL1|KSL0|0/1, 0/1, 0-3|Op.4 Key Control|Ignore Note Off/ Key Scale Sens./ Key Scale Level|
 |39|p32|"0"|"0"|"0"|"0"|AR3|AR2|AR1|AR0|0-15|Op.4 Attack Rate||
 |40|p33|"0"|"0"|"0"|"0"|DR3|DR2|DR1|DR0|0-15|Op.4 Decay Rate||
@@ -54,7 +54,7 @@
 |44|p37|"0"|"0"|TL5|TL4|TL3|TL2|TL1|TL0|0-63|Op.4 Total Level||
 |45|p38|"0"|DAM1|DAM0|EAM|"0"|DVB1|DVB0|EVB|0-3,0/1,0-3,0/1|Op.4 Modulation||
 |46|p39|"0"|DT2|DT1|DT0|MT3|MT2|MT1|MT0|0-7,0-15|Op.4 Pitch|Detune/ Multi|
-|47|p40|"0"|"0"|"0"|FB4|FB3|FB2|FB1|FB0|0-15|Op.4 Wave Shape||
+|47|p40|"0"|"0"|"0"|WS4|WS3|WS2|WS1|WS0|0-15|Op.4 Wave Shape||
 |48|s0|"0"|s|s|s|s|s|s|s|32-126|Character0|ASCII code|
 |49|s1|"0"|s|s|s|s|s|s|s|32-126|Character1|ASCII code|
 |50|s2|"0"|s|s|s|s|s|s|s|32-126|Character2|ASCII code|
