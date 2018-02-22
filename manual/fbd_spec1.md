@@ -261,7 +261,7 @@ Set DRV_SEL to "1" when this device is used in dual power supply configuration.
 
 1. Set the SFTRST to "00H".
 
-1. Wait for 30ms after the step 3.
+1. Wait for 30ms after the step 10.
 
 	This period of time is the time required for the VREF stabilization and the SFTRST completion.
 
